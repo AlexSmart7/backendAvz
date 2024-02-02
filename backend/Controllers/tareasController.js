@@ -1,10 +1,10 @@
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler')       //instalar npm i express-async-handler@1.1.4
 
-const getTareas = asynHandler( async (req,res) => {
+const getTareas  = asyncHandler(async (req,res) => {
     res.status(200).json({mensaje: 'Get Tareas' })
 })
 
-const createTareas = asynHandler (async(req,res) => {
+const createTareas = asyncHandler(async (req,res) => {
     
     if(!req.body.descripcion) {
         res.status(400)
@@ -14,11 +14,11 @@ const createTareas = asynHandler (async(req,res) => {
     res.status(201).json({mensaje: 'Create Tareas' })
 })
 
-const updateTareas = asyncHandler( async(req,res) => {
+const updateTareas = asyncHandler(async (req,res) => {
     res.status(200).json({mensaje: ` Modificar la tarea con id ${req.params.id} ` })
 })
 
-const deleteTareas = asyncHandler( async(req,res) => {
+const deleteTareas = asyncHandler(async (req,res) => {
     res.status(200).json({ id: req.params.id  })
 })
 
