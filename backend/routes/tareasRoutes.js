@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const { getTareas, createTareas, updateTareas, deleteTareas} = require ('../Controllers/tareasController')
+const { getTareas, createTareas, updateTareas, deleteTareas} = require ('../Controllers/tareasControllers')
 
 
 //router.route('/').get(getTareas).post(createTareas)
